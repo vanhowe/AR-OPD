@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AR-OPD | Anchored Residual Guidance for Privileged On-Policy Distillation</title>
+    <meta
+      name="description"
+      content="AR-OPD disentangles privileged supervision into a locally reachable anchor and a controlled residual, improving privileged on-policy distillation for long-horizon reasoning."
+    />
+    <meta property="og:title" content="AR-OPD: Anchored Residual Guidance" />
+    <meta
+      property="og:description"
+      content="A target-design approach for privileged on-policy distillation that controls hindsight-biased oracle signals."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#">AR-OPD</a>
+        <div class="nav-links">
+          <a href="#method">Method</a>
+          <a href="#results">Results</a>
+          <a href="#diagnostics">Diagnostics</a>
+          <a href="#resources">Resources</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Privileged On-Policy Distillation</p>
+          <h1>Beyond Absolute Imitation: Anchored Residual Guidance</h1>
+          <p class="lead">
+            AR-OPD treats privileged information as a target-design problem. Instead of copying a full-view
+            oracle distribution directly, it anchors supervision to a locally reachable partial view and transfers
+            the remaining foresight as a controlled residual.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="assets/aropd-paper.pdf">Read Paper</a>
+            <a class="button" href="https://github.com/vanhowe/GD-Train-Collab">Code</a>
+            <a class="button disabled" href="#" aria-disabled="true">arXiv coming soon</a>
+          </div>
+        </div>
+
+        <div class="metric-panel" aria-label="Key results">
+          <div class="metric">
+            <span class="value">+2.3</span>
+            <span class="label">points over Full OPD</span>
+          </div>
+          <div class="metric">
+            <span class="value">+12.1</span>
+            <span class="label">points over base model</span>
+          </div>
+          <div class="metric">
+            <span class="value">21.7%</span>
+            <span class="label">fewer shortcut events</span>
+          </div>
+          <div class="metric">
+            <span class="value">+7.2</span>
+            <span class="label">points on 768-1024 token rollouts</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2>Full-view oracle signals are useful, but unsafe as absolute targets.</h2>
+          <p>
+            A full privileged teacher can assign high probability to tokens justified by future information that
+            the student cannot access at the current prefix. AR-OPD separates the target into a compatible anchor
+            and a bounded full-minus-partial residual.
+          </p>
+        </div>
+        <figure class="wide-figure">
+          <img src="assets/architecture.png" alt="AR-OPD architecture diagram" />
+          <figcaption>
+            AR-OPD evaluates partial and full teacher views on the same student state, then constructs an
+            anchored residual target before distillation.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="results" class="section compact">
+        <div class="section-heading">
+          <p class="eyebrow">Main Results</p>
+          <h2>Anchored residual guidance improves across seven benchmarks.</h2>
+        </div>
+        <div class="results-grid">
+          <div class="result-card">
+            <span class="result-label">Average</span>
+            <strong>70.3</strong>
+            <p>Best average score across math, code, science, and medical QA benchmarks.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Math</span>
+            <strong>74.6 / 57.5</strong>
+            <p>MATH500 and AMC23, exceeding Full OPD by 3.6 and 2.5 points.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-label">Residual value</span>
+            <strong>+5.1</strong>
+            <p>Average gain over Partial OPD, showing that controlled full-view residuals add useful guidance.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="diagnostics" class="section two-column">
+        <div>
+          <p class="eyebrow">Target Reliability</p>
+          <h2>Mechanism evidence matches the performance pattern.</h2>
+          <p>
+            Diagnostics show that full-view targets create larger teacher-student disagreement near rollout tails,
+            while AR-OPD reduces shortcut events and is strongest on longer trajectories.
+          </p>
+          <ul class="check-list">
+            <li>Support mismatch rises late in long rollouts.</li>
+            <li>Full-view reliability degrades with privileged-context length.</li>
+            <li>AR-OPD reduces shortcut-like privileged-information leakage.</li>
+          </ul>
+        </div>
+        <div class="figure-stack">
+          <figure>
+            <img src="assets/teacher_reliability.png" alt="Teacher reliability diagnostic plots" />
+            <figcaption>Teacher reliability and support-gap diagnostics.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/training_dynamics.png" alt="Training dynamics and long-rollout accuracy plots" />
+            <figcaption>Validation accuracy, shortcut counts, and long-rollout accuracy.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="resources" class="section resources">
+        <div class="section-heading">
+          <p class="eyebrow">Resources</p>
+          <h2>Paper, code, and citation.</h2>
+        </div>
+        <div class="resource-grid">
+          <a class="resource-card" href="assets/aropd-paper.pdf">
+            <span>Paper PDF</span>
+            <strong>Local draft</strong>
+          </a>
+          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab">
+            <span>Code</span>
+            <strong>GD-Train-Collab</strong>
+          </a>
+          <a class="resource-card disabled" href="#" aria-disabled="true">
+            <span>arXiv</span>
+            <strong>Coming soon</strong>
+          </a>
+        </div>
+        <div class="citation">
+          <p class="citation-title">BibTeX</p>
+          <pre><code>@misc{aropd2026,
+  title = {Beyond Absolute Imitation: Anchored Residual Guidance for Privileged On-Policy Distillation},
+  author = {Wenhao Zhu},
+  year = {2026},
+  note = {Preprint}
+}</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>AR-OPD</span>
+      <span>Anchored residual guidance for privileged on-policy distillation.</span>
+    </footer>
+  </body>
+</html>
