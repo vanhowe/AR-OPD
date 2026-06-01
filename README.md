@@ -1,10 +1,32 @@
-# AR-OPD Project Page
+# AR-OPD
 
-This folder contains a GitHub Pages-ready project website for:
+This repository hosts the project page and public resources for:
 
 **Beyond Absolute Imitation: Anchored Residual Guidance for Privileged On-Policy Distillation**
 
-## Files
+## Project Page
+
+GitHub Pages source:
+
+```text
+docs/
+```
+
+Expected project page URL after Pages is enabled:
+
+```text
+https://vanhowe.github.io/AR-OPD/
+```
+
+To enable the page:
+
+1. Open repository `Settings`.
+2. Go to `Pages`.
+3. Set source to `Deploy from a branch`.
+4. Select branch `main` and folder `/docs`.
+5. Save.
+
+## Repository Contents
 
 - `docs/index.html`: project homepage
 - `docs/styles.css`: page styling
@@ -12,40 +34,7 @@ This folder contains a GitHub Pages-ready project website for:
 - `docs/assets/teacher_reliability.png`: target-reliability diagnostic figure
 - `docs/assets/training_dynamics.png`: training dynamics / shortcut / long-rollout figure
 - `docs/assets/aropd-paper.pdf`: current paper PDF
-
-## Recommended GitHub Setup
-
-Recommended repo name:
-
-```text
-AR-OPD
-```
-
-Recommended description:
-
-```text
-Project page and resources for AR-OPD: Anchored Residual Guidance for Privileged On-Policy Distillation.
-```
-
-After creating the repo, copy this folder's contents into the repo root and enable GitHub Pages:
-
-1. Open the repository settings.
-2. Go to `Pages`.
-3. Set source to `Deploy from a branch`.
-4. Select branch `main` and folder `/docs`.
-5. Save.
-
-The project page URL will usually be:
-
-```text
-https://vanhowe.github.io/AR-OPD/
-```
-
-If you prefer to use the existing `GD-Train-Collab` repository, copy only the `docs/` folder into that repo and enable Pages from `/docs`. The URL will usually be:
-
-```text
-https://vanhowe.github.io/GD-Train-Collab/
-```
+- `ARXIV_CHECKLIST.md`: submission checklist and project-page update notes
 
 ## After arXiv Is Live
 
