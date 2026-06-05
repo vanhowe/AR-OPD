@@ -24,6 +24,7 @@
           <a href="#method">Method</a>
           <a href="#results">Results</a>
           <a href="#diagnostics">Diagnostics</a>
+          <a href="#code-data">Code & Data</a>
           <a href="#resources">Resources</a>
         </div>
       </nav>
@@ -132,6 +133,41 @@
             <img src="assets/training_dynamics.png" alt="Training dynamics and long-rollout accuracy plots" />
             <figcaption>Validation accuracy, shortcut counts, and long-rollout accuracy.</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section id="code-data" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Code and Data</p>
+          <h2>Public code package with reproducible data layout.</h2>
+          <p>
+            Training and evaluation code is released through GD-Train-Collab. The package includes launch
+            scripts, configuration files, evaluation data, GitHub-safe chunked training inputs, and data
+            reconstruction utilities. Large derived datasets, checkpoints, and report bundles are kept local by
+            design.
+          </p>
+        </div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab">
+            <span>Code package</span>
+            <strong>GD-Train-Collab</strong>
+          </a>
+          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab/blob/main/data/README.md">
+            <span>Data layout</span>
+            <strong>Data README</strong>
+          </a>
+          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab/blob/main/scripts/prepare_data_layout.sh">
+            <span>Restore assets</span>
+            <strong>prepare_data_layout.sh</strong>
+          </a>
+        </div>
+        <div class="citation">
+          <p class="citation-title">Minimal Setup</p>
+          <pre><code>git clone https://github.com/vanhowe/GD-Train-Collab.git
+cd GD-Train-Collab
+bash scripts/install_env.sh
+bash scripts/prepare_data_layout.sh
+bash scripts/materialize_all_derived_datasets.sh</code></pre>
         </div>
       </section>
 
