@@ -7,7 +7,9 @@
 <p align="center">
   <a href="https://vanhowe.github.io/AR-OPD/">Project Page</a> |
   <a href="docs/assets/aropd-paper.pdf">Paper Draft</a> |
-  <a href="https://github.com/vanhowe/GD-Train-Collab">Code Package</a> |
+  <a href="code/">Code</a> |
+  <a href="code/data/README.md">Data</a> |
+  <a href="RELEASE_STATUS.md">Release Status</a> |
   <a href="ARXIV_CHECKLIST.md">arXiv Checklist</a>
 </p>
 
@@ -60,40 +62,42 @@ The target-reliability diagnostics show that full-view supervision can create la
 
 ## Code
 
-The current training and evaluation code package is hosted in:
-
-**https://github.com/vanhowe/GD-Train-Collab**
+Training and evaluation code is included in this repository under [`code/`](code/).
 
 Useful entry points:
 
-- [`scripts/prepare_data_layout.sh`](https://github.com/vanhowe/GD-Train-Collab/blob/main/scripts/prepare_data_layout.sh): restore GitHub-safe data chunks and validate the data layout.
-- [`data/README.md`](https://github.com/vanhowe/GD-Train-Collab/blob/main/data/README.md): data layout, bundled evaluation sets, and local derived-data expectations.
-- [`scripts/`](https://github.com/vanhowe/GD-Train-Collab/tree/main/scripts): launch, materialization, validation, and result-collection scripts.
-- [`configs/`](https://github.com/vanhowe/GD-Train-Collab/tree/main/configs): hardware and experiment configuration files.
+- [`code/main.py`](code/main.py): main training entry point.
+- [`code/distil_trainer.py`](code/distil_trainer.py): distillation trainer and AR-OPD target construction.
+- [`code/distil_config.py`](code/distil_config.py): method, domain, and training configuration objects.
+- [`code/eval_math.py`](code/eval_math.py), [`code/eval_code.py`](code/eval_code.py), [`code/eval_medical.py`](code/eval_medical.py): evaluation entry points.
+- [`code/scripts/`](code/scripts): launch, materialization, validation, and result-collection scripts.
+- [`code/configs/`](code/configs): hardware, domain, and method configuration files.
 
 Minimal setup path:
 
 ```bash
-git clone https://github.com/vanhowe/GD-Train-Collab.git
-cd GD-Train-Collab
+git clone https://github.com/vanhowe/AR-OPD.git
+cd AR-OPD/code
 bash scripts/install_env.sh
 bash scripts/prepare_data_layout.sh
+
+# After raw training files or chunk bundles are available locally:
 bash scripts/materialize_all_derived_datasets.sh
 ```
 
 ## Data
 
-The public code package includes GitHub-safe data assets and reconstruction scripts rather than large materialized training directories.
+This repository includes lightweight evaluation assets, data manifests, and reconstruction scripts rather than large materialized training directories.
 
-Included directly in `GD-Train-Collab`:
+Included directly in [`code/data/`](code/data/):
 
-- raw math/code/medical training inputs as chunked GitHub-safe files;
 - math, code, and medical evaluation JSONL files;
 - ASFT-aligned math benchmark files;
 - manifests and scripts for restoring and validating local data.
 
 Kept local by design:
 
+- raw training chunk bundles used by the earlier collaborator handoff;
 - materialized `data/derived/**` training datasets;
 - checkpoints;
 - large artifacts and report bundles.
@@ -104,7 +108,18 @@ After cloning the code package, run:
 bash scripts/prepare_data_layout.sh
 ```
 
-This restores chunked raw data and validates the expected asset layout. Derived datasets can then be rebuilt with the materialization scripts in `scripts/`.
+This validates the expected asset layout. Derived datasets can then be rebuilt with the materialization scripts in [`code/scripts/`](code/scripts/).
+
+## Release Status
+
+| Component | Status |
+| --- | --- |
+| Paper draft | Included under [`docs/assets/aropd-paper.pdf`](docs/assets/aropd-paper.pdf) |
+| Project page | Live at <https://vanhowe.github.io/AR-OPD/> |
+| Training and evaluation code | Included under [`code/`](code/) |
+| Lightweight evaluation data and manifests | Included under [`code/data/`](code/data/) |
+| Large derived datasets and checkpoints | Not bundled; regenerated locally from scripts |
+| arXiv link | Pending |
 
 ## Repository Contents
 
@@ -113,6 +128,9 @@ This restores chunked raw data and validates the expected asset layout. Derived 
 - [`docs/assets/architecture.png`](docs/assets/architecture.png): AR-OPD method architecture.
 - [`docs/assets/training_dynamics.png`](docs/assets/training_dynamics.png): validation accuracy, shortcut count, and long-rollout results.
 - [`docs/assets/teacher_reliability.png`](docs/assets/teacher_reliability.png): teacher reliability and support-gap diagnostics.
+- [`code/`](code/): training, evaluation, configuration, and data-preparation code.
+- [`LICENSE`](LICENSE): Apache-2.0 license for released code and repository assets.
+- [`RELEASE_STATUS.md`](RELEASE_STATUS.md): current release status and data/code boundaries.
 - [`ARXIV_CHECKLIST.md`](ARXIV_CHECKLIST.md): arXiv release checklist.
 
 ## Citation

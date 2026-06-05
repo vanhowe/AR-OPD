@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "chunk_size_bytes": 94371840,
+  "artifacts": [
+    {
+      "domain": "math",
+      "key": "train_raw",
+      "restore_path": "data/packages/math/train/numinamath_cot_100k_sdft.jsonl",
+      "source_path": "local://asft_math_data/train_data/numinamath_cot_100k_sdft.jsonl",
+      "size_bytes": 166107993,
+      "sha256": "6a0a8f0f0b2bc7e31f147b696caeba8173d2ad34088f7b2777852d070f028837",
+      "parts": [
+        {
+          "path": "data/github_chunks/math/train_raw/numinamath_cot_100k_sdft.jsonl.part-0000",
+          "size_bytes": 94371840,
+          "sha256": "0ea8b8c0e034e641d83e96c2756978001f50278bca4594fa9500d6792e010b24"
+        },
+        {
+          "path": "data/github_chunks/math/train_raw/numinamath_cot_100k_sdft.jsonl.part-0001",
+          "size_bytes": 71736153,
+          "sha256": "6b063fa97352ecc9435acd83660015c463af8adf88f4183525a63b974f1fb335"
+        }
+      ]
+    },
+    {
+      "domain": "code",
+      "key": "train_source",
+      "restore_path": "data/packages/code/train/code_100k_source.jsonl",
+      "source_path": "hf://datasets/ise-uiuc/Magicoder-Evol-Instruct-110K/data-evol_instruct-decontaminated.jsonl",
+      "size_bytes": 255186224,
+      "sha256": "99d8bab4c443050e5bb4bc339f709de8bcccf81cb83e15ef8d53369c5d8dc495",
+      "parts": [
+        {
+          "path": "data/github_chunks/code/train_source/data-evol_instruct-decontaminated.jsonl.part-0000",
+          "size_bytes": 94371840,
+          "sha256": "d45cd0e7baf1a3b4b4ba18a290a7b7c075f7daf2d3b545740ef0cdcc0fd226ee"
+        },
+        {
+          "path": "data/github_chunks/code/train_source/data-evol_instruct-decontaminated.jsonl.part-0001",
+          "size_bytes": 94371840,
+          "sha256": "8df698e22e696d5daa3b74c50ae9253170c0534b0cee9d0945a618a1c9d49a01"
+        },
+        {
+          "path": "data/github_chunks/code/train_source/data-evol_instruct-decontaminated.jsonl.part-0002",
+          "size_bytes": 66442544,
+          "sha256": "ebbbdc26d52812e5bf72b28963160002dad74795dd067a601484eb5fff5837a6"
+        }
+      ]
+    },
+    {
+      "domain": "medical",
+      "key": "train_raw",
+      "restore_path": "data/packages/medical/train/medmcqa_100k_sdft.jsonl",
+      "source_path": "local://asft_medical_data/train_data/medmcqa_100k_sdft.jsonl",
+      "size_bytes": 98981039,
+      "sha256": "a30b0a7b56bfba0eab087cf3612c5fae26f6c93507481e4c341e4fb34352f690",
+      "parts": [
+        {
+          "path": "data/github_chunks/medical/train_raw/medmcqa_100k_sdft.jsonl.part-0000",
+          "size_bytes": 94371840,
+          "sha256": "67692ffba325015c154b2537b2c720d0980c6440f2eea468e74bf1d783e7bcd4"
+        },
+        {
+          "path": "data/github_chunks/medical/train_raw/medmcqa_100k_sdft.jsonl.part-0001",
+          "size_bytes": 4609199,
+          "sha256": "85465dea234ceffbcc024cb02734a222cfee3c25ad7bee116f28cf5c8cf576fa"
+        }
+      ]
+    }
+  ]
+}

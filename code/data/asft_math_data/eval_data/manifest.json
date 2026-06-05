@@ -1,0 +1,50 @@
+{
+  "generated_at_utc": "2026-04-11T02:53:57.971069+00:00",
+  "files": [
+    {
+      "path": "math500_eval.jsonl",
+      "records": 500,
+      "source": {
+        "name": "HuggingFaceH4/MATH-500",
+        "split": "test"
+      }
+    },
+    {
+      "path": "minerva_math_eval.jsonl",
+      "records": 272,
+      "source": {
+        "name": "knoveleng/Minerva-Math",
+        "split": "train"
+      }
+    },
+    {
+      "path": "olympiadbench_oe_to_maths_en_comp_eval.jsonl",
+      "records": 674,
+      "source": {
+        "name": "Hothan/OlympiadBench",
+        "config": "OE_TO_maths_en_COMP",
+        "split": "train"
+      }
+    },
+    {
+      "path": "aime_2024_eval.jsonl",
+      "records": 30,
+      "source": {
+        "name": "HuggingFaceH4/aime_2024",
+        "split": "train"
+      }
+    },
+    {
+      "path": "amc_2023_eval.jsonl",
+      "records": 40,
+      "source": {
+        "name": "math-ai/amc23",
+        "split": "test"
+      }
+    }
+  ],
+  "notes": [
+    "OlympiadBench uses the `OE_TO_maths_en_COMP` config: English, text-only, open-ended competition math.",
+    "Minerva-Math and AIME 2024 are exposed on Hugging Face via train splits."
+  ]
+}

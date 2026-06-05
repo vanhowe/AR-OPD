@@ -1,0 +1,49 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "prompt": {
+      "feature": {
+        "content": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "role": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      },
+      "_type": "List"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "solution": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "problem": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "subject": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "level": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "unique_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source_split": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

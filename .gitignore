@@ -1,0 +1,30 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Logs and generated outputs
+*.log
+outputs/
+artifacts/
+reports/
+runs/
+wandb/
+
+# Large training outputs
+checkpoints/
+code/checkpoints/
+code/artifacts/
+code/reports/
+code/runs/
+code/data/derived/
+code/data/github_chunks/
+
+# Local machine configuration
+.env
+*.local

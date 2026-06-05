@@ -42,7 +42,7 @@
           </p>
           <div class="actions">
             <a class="button primary" href="assets/aropd-paper.pdf">Read Paper</a>
-            <a class="button" href="https://github.com/vanhowe/GD-Train-Collab">Code</a>
+            <a class="button" href="https://github.com/vanhowe/AR-OPD/tree/main/code">Code</a>
             <a class="button disabled" href="#" aria-disabled="true">arXiv coming soon</a>
           </div>
         </div>
@@ -141,32 +141,33 @@
           <p class="eyebrow">Code and Data</p>
           <h2>Public code package with reproducible data layout.</h2>
           <p>
-            Training and evaluation code is released through GD-Train-Collab. The package includes launch
-            scripts, configuration files, evaluation data, GitHub-safe chunked training inputs, and data
-            reconstruction utilities. Large derived datasets, checkpoints, and report bundles are kept local by
-            design.
+            Training and evaluation code is included directly in the AR-OPD repository. The release includes
+            launch scripts, configuration files, evaluation data, data manifests, and reconstruction utilities.
+            Large derived datasets, checkpoints, and report bundles are kept local by design.
           </p>
         </div>
         <div class="resource-grid">
-          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab">
+          <a class="resource-card" href="https://github.com/vanhowe/AR-OPD/tree/main/code">
             <span>Code package</span>
-            <strong>GD-Train-Collab</strong>
+            <strong>AR-OPD/code</strong>
           </a>
-          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab/blob/main/data/README.md">
+          <a class="resource-card" href="https://github.com/vanhowe/AR-OPD/blob/main/code/data/README.md">
             <span>Data layout</span>
             <strong>Data README</strong>
           </a>
-          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab/blob/main/scripts/prepare_data_layout.sh">
+          <a class="resource-card" href="https://github.com/vanhowe/AR-OPD/blob/main/code/scripts/prepare_data_layout.sh">
             <span>Restore assets</span>
             <strong>prepare_data_layout.sh</strong>
           </a>
         </div>
         <div class="citation">
           <p class="citation-title">Minimal Setup</p>
-          <pre><code>git clone https://github.com/vanhowe/GD-Train-Collab.git
-cd GD-Train-Collab
+          <pre><code>git clone https://github.com/vanhowe/AR-OPD.git
+cd AR-OPD/code
 bash scripts/install_env.sh
 bash scripts/prepare_data_layout.sh
+
+# After raw training files or chunk bundles are available locally:
 bash scripts/materialize_all_derived_datasets.sh</code></pre>
         </div>
       </section>
@@ -181,9 +182,9 @@ bash scripts/materialize_all_derived_datasets.sh</code></pre>
             <span>Paper PDF</span>
             <strong>Local draft</strong>
           </a>
-          <a class="resource-card" href="https://github.com/vanhowe/GD-Train-Collab">
+          <a class="resource-card" href="https://github.com/vanhowe/AR-OPD/tree/main/code">
             <span>Code</span>
-            <strong>GD-Train-Collab</strong>
+            <strong>AR-OPD/code</strong>
           </a>
           <a class="resource-card disabled" href="#" aria-disabled="true">
             <span>arXiv</span>

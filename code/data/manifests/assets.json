@@ -1,0 +1,35 @@
+{
+  "github_chunk_manifest": "data/manifests/github_chunks.json",
+  "expected_packages": {
+    "math": {
+      "train_raw": "data/packages/math/train/numinamath_cot_100k_sdft.jsonl",
+      "eval_math500": "data/packages/math/eval/eval_math500",
+      "eval_aime_2024": "data/packages/math/eval/eval_aime_2024",
+      "eval_numina_5k_test": "data/packages/math/eval/eval_numina_5k_test"
+    },
+    "code": {
+      "train_source": "data/packages/code/train/code_100k_source.jsonl",
+      "eval_humaneval": "data/packages/code/eval/humanevalplus_eval.jsonl",
+      "eval_mbpp": "data/packages/code/eval/mbppplus_eval.jsonl"
+    },
+    "medical": {
+      "train_raw": "data/packages/medical/train/medmcqa_100k_sdft.jsonl",
+      "eval_mmlu_medical": "data/packages/medical/eval/mmlu_medical_eval.jsonl",
+      "eval_medqa": "data/packages/medical/eval/medqa_usmle_4_options_eval.jsonl",
+      "eval_medmcqa": "data/packages/medical/eval/medmcqa_test_eval.jsonl"
+    }
+  },
+  "expected_derived": {
+    "math": {
+      "dual_train": "data/derived/math_dual_100k/datasets/train_dual_numinamath_cot_100k_sdft_prefixhalf"
+    },
+    "code": {
+      "raw_sft": "data/derived/code_100k/train_data/magicoder_code_sdft_train.jsonl",
+      "dual_train": "data/derived/code_100k/datasets/train_dual_code_magicoder_prefixhalf"
+    },
+    "medical": {
+      "raw_sft": "data/derived/medical_clean_50k/raw/medmcqa_50000_sdft_clean.jsonl",
+      "dual_train": "data/derived/medical_clean_50k/datasets/train_dual_medmcqa_clean_50000_prefixhalf"
+    }
+  }
+}

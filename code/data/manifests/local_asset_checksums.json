@@ -1,0 +1,79 @@
+[
+  {
+    "domain": "math",
+    "key": "train_raw",
+    "src": "local://asft_math_data/train_data/numinamath_cot_100k_sdft.jsonl",
+    "dst": "data/packages/math/train/numinamath_cot_100k_sdft.jsonl",
+    "sha256": "6a0a8f0f0b2bc7e31f147b696caeba8173d2ad34088f7b2777852d070f028837"
+  },
+  {
+    "domain": "math",
+    "key": "eval_math500",
+    "src": "local://asft_math_data/eval_disk/eval_math500",
+    "dst": "data/packages/math/eval/eval_math500",
+    "sha256": "da12ef439c233869861a48f3f4583c32506820a570c2179b910d6e3297e38e8b"
+  },
+  {
+    "domain": "math",
+    "key": "eval_aime_2024",
+    "src": "local://asft_math_data/eval_disk/eval_aime_2024",
+    "dst": "data/packages/math/eval/eval_aime_2024",
+    "sha256": "3e04c63b298cb2df4fdcbd947763fe1548faa7f14e0d0453656e2386ffbd238f"
+  },
+  {
+    "domain": "math",
+    "key": "eval_numina_5k_test",
+    "src": "local://asft_math_data/eval_disk/eval_numina_5k_test",
+    "dst": "data/packages/math/eval/eval_numina_5k_test",
+    "sha256": "d7e300a81954e23bbb570233d06d30f832febd8ecd3cd96aabb2257ce3c0f0fc"
+  },
+  {
+    "domain": "code",
+    "key": "train_source",
+    "src": "hf://datasets/ise-uiuc/Magicoder-Evol-Instruct-110K/data-evol_instruct-decontaminated.jsonl",
+    "dst": "data/packages/code/train/code_100k_source.jsonl",
+    "sha256": "99d8bab4c443050e5bb4bc339f709de8bcccf81cb83e15ef8d53369c5d8dc495"
+  },
+  {
+    "domain": "code",
+    "key": "eval_humaneval",
+    "src": "hf://datasets/evalplus/humanevalplus/test.jsonl",
+    "dst": "data/packages/code/eval/humanevalplus_eval.jsonl",
+    "sha256": "9a572f575d279be54a793056a984ca53c23b7f83a26f993450e0f18c7e9b2c80"
+  },
+  {
+    "domain": "code",
+    "key": "eval_mbpp",
+    "src": "hf://datasets/evalplus/mbppplus/data/test-00000-of-00001-d5781c9c51e02795.parquet",
+    "dst": "data/packages/code/eval/mbppplus_eval.jsonl",
+    "sha256": "6b138344a97e2f2269ce3e479fc92f4b7d62419024c252a5ff8ff09c3e4a5394"
+  },
+  {
+    "domain": "medical",
+    "key": "train_raw",
+    "src": "local://asft_medical_data/train_data/medmcqa_100k_sdft.jsonl",
+    "dst": "data/packages/medical/train/medmcqa_100k_sdft.jsonl",
+    "sha256": "a30b0a7b56bfba0eab087cf3612c5fae26f6c93507481e4c341e4fb34352f690"
+  },
+  {
+    "domain": "medical",
+    "key": "eval_mmlu_medical",
+    "src": "local://asft_medical_data/eval_data/mmlu_medical_eval.jsonl",
+    "dst": "data/packages/medical/eval/mmlu_medical_eval.jsonl",
+    "sha256": "4f4383390779b3cfa92dfbbc6766fe5748b5726fbdd16c7258a9af2410fccf4c"
+  },
+  {
+    "domain": "medical",
+    "key": "eval_medqa",
+    "src": "local://asft_medical_data/eval_data/medqa_usmle_4_options_eval.jsonl",
+    "dst": "data/packages/medical/eval/medqa_usmle_4_options_eval.jsonl",
+    "sha256": "7b807317313965c30c5d4f7e4e35a6969405dd4773182cae328658f6f08e4384"
+  },
+  {
+    "domain": "medical",
+    "key": "eval_medmcqa",
+    "src": "local://asft_medical_data/eval_data/medmcqa_test_eval.jsonl",
+    "dst": "data/packages/medical/eval/medmcqa_test_eval.jsonl",
+    "sha256": "29a98295ad435346f860691eccfcaa10afca9ac2428605577ff019df43be6411"
+  }
+]
