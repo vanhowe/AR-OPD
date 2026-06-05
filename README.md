@@ -138,7 +138,7 @@ This validates the expected asset layout. Derived datasets can then be rebuilt w
 ```bibtex
 @misc{aropd2026,
   title = {Beyond Absolute Imitation: Anchored Residual Guidance for Privileged On-Policy Distillation},
-  author = {Wenhao Zhu},
+  author = {Wenhao Zhang},
   year = {2026},
   note = {Preprint}
 }
