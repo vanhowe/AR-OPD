@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://vanhowe.github.io/AR-OPD/">Project Page</a> |
-  <a href="docs/assets/aropd-paper.pdf">Paper Draft</a> |
+  <a href="docs/assets/aropd-paper.pdf">Paper</a> |
   <a href="code/">Code</a> |
   <a href="code/data/README.md">Data</a> |
   <a href="RELEASE_STATUS.md">Release Status</a> |
@@ -97,7 +97,7 @@ Included directly in [`code/data/`](code/data/):
 
 Kept local by design:
 
-- raw training chunk bundles used by the earlier collaborator handoff;
+- large raw training chunk bundles;
 - materialized `data/derived/**` training datasets;
 - checkpoints;
 - large artifacts and report bundles.
@@ -114,7 +114,7 @@ This validates the expected asset layout. Derived datasets can then be rebuilt w
 
 | Component | Status |
 | --- | --- |
-| Paper draft | Included under [`docs/assets/aropd-paper.pdf`](docs/assets/aropd-paper.pdf) |
+| Paper | Included under [`docs/assets/aropd-paper.pdf`](docs/assets/aropd-paper.pdf) |
 | Project page | Live at <https://vanhowe.github.io/AR-OPD/> |
 | Training and evaluation code | Included under [`code/`](code/) |
 | Lightweight evaluation data and manifests | Included under [`code/data/`](code/data/) |
@@ -124,7 +124,7 @@ This validates the expected asset layout. Derived datasets can then be rebuilt w
 ## Repository Contents
 
 - [`docs/index.html`](docs/index.html): project homepage.
-- [`docs/assets/aropd-paper.pdf`](docs/assets/aropd-paper.pdf): current paper draft.
+- [`docs/assets/aropd-paper.pdf`](docs/assets/aropd-paper.pdf): current paper PDF.
 - [`docs/assets/architecture.png`](docs/assets/architecture.png): AR-OPD method architecture.
 - [`docs/assets/training_dynamics.png`](docs/assets/training_dynamics.png): validation accuracy, shortcut count, and long-rollout results.
 - [`docs/assets/teacher_reliability.png`](docs/assets/teacher_reliability.png): teacher reliability and support-gap diagnostics.
