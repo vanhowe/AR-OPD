@@ -6,6 +6,8 @@ This directory contains the public training, evaluation, configuration, and data
 
 The release includes runnable source code, launch scripts, configuration files, lightweight evaluation data, data manifests, and asset-validation utilities. Large derived datasets, checkpoints, generated reports, and raw training chunk bundles are not bundled.
 
+Implementation note: legacy `gdsdft_*` flags and method configs correspond to the AR-OPD anchored residual target used in the paper. Paper runs use the prompt and completion limits specified by the launch scripts and experiment tables; `configs/base.env` keeps a larger general default completion length for local experimentation.
+
 ## Structure
 
 | Path | Purpose |
