@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2606.10385">arXiv</a> |
   <a href="https://vanhowe.github.io/AR-OPD/">Project Page</a> |
   <a href="docs/assets/aropd-paper.pdf">Paper</a> |
   <a href="code/">Code</a> |
@@ -119,7 +120,7 @@ This validates the expected asset layout. Derived datasets can then be rebuilt w
 | Training and evaluation code | Included under [`code/`](code/) |
 | Lightweight evaluation data and manifests | Included under [`code/data/`](code/data/) |
 | Large derived datasets and checkpoints | Not bundled; regenerated locally from scripts |
-| arXiv link | Pending |
+| arXiv link | <https://arxiv.org/abs/2606.10385> |
 
 ## Repository Contents
 
@@ -140,11 +141,12 @@ This validates the expected asset layout. Derived datasets can then be rebuilt w
   title = {Beyond Absolute Imitation: Anchored Residual Guidance for Privileged On-Policy Distillation},
   author = {Wenhao Zhang},
   year = {2026},
-  note = {Preprint}
+  eprint = {2606.10385},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2606.10385}
 }
 ```
-
-The citation will be updated after the arXiv identifier is available.
 
 ## Security
 
